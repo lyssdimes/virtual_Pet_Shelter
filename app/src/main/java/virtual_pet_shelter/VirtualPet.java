@@ -34,9 +34,8 @@ public class VirtualPet {
         return value.nextInt(55) + 1;
     }
 
-    public VirtualPet(String petName, String petDescription, int PetHunger, int petThirst, int petBoredom) {
+    public VirtualPet(String petName, int PetHunger, int petThirst, int petBoredom) {
         this.petName = petName;
-        this.petDescription = petDescription;
         this.petHunger = createRandomValue();
         this.petThirst = createRandomValue();
         this.petBoredom = createRandomValue();
