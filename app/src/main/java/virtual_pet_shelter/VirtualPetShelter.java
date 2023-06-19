@@ -31,10 +31,8 @@ public class VirtualPetShelter {
         VirtualPet sixthAdoptee = new VirtualPet("Clementine",
                 "Female. 6month old orange kitty. Enjoys zoomies, people, and animals", 0, 0, 0);
         shelterPetList.add(sixthAdoptee);
-        VirtualPet seventhAdoptee = new VirtualPet("Testing", "likes to sing in the rain", 0, 0 ,0);
+        VirtualPet seventhAdoptee = new VirtualPet("Zoolander", "Male. 2yr old Russian blue cat. Enjoys blue steel.", 0, 0 ,0);
         shelterPetList.add(seventhAdoptee);
-        VirtualPet eighthAdoptee = new VirtualPet("Llama", "spitting at people", 0,0,0);
-        shelterPetList.add(eighthAdoptee);
     }
 
     public void feedAllAdoptees() {
@@ -71,19 +69,18 @@ public class VirtualPetShelter {
             if (adopted.getPetName().equalsIgnoreCase(adoptedPetsName)) {
                 petToAdopt = adopted;
             }
+        }
             if (petToAdopt != null) {
                 shelterPetList.remove(petToAdopt);
                 System.out.println("Thank you for agreeing to take home a furry friend.");
-                System.out.println("Please stop at the front desk to finalize the adoption of " + petToAdopt + ".");
+                System.out.println("Please stop at the front desk to finalize the adoption of " + adoptedPetsName + ".");
             } else {
                 System.out.println("Uh oh. Pet not found. Please call the office to inquire.");
             }
         }
-    }
 
     public void addNewPetForAdoption(VirtualPet newAdopteesName) {
         shelterPetList.add(newAdopteesName);
-        // remember to add new virtual pet object in VirtualPetApp.java for this
     }
 
 }

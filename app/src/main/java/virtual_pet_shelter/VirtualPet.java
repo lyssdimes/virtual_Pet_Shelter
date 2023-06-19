@@ -31,7 +31,7 @@ public class VirtualPet {
 
     private int createRandomValue() {
         Random value = new Random();
-        return value.nextInt(45) + 1;
+        return value.nextInt(55) + 1;
     }
 
     public VirtualPet(String petName, String petDescription, int PetHunger, int petThirst, int petBoredom) {
@@ -48,23 +48,29 @@ public class VirtualPet {
     }
 
     public void feed() {
-        petHunger -= 15;
+        petHunger -= 10;
         if (petHunger < 0) {
             petHunger = 0;
         }
     }
 
     public void drink() {
-        petThirst -= 15;
+        petThirst -= 10;
         if (petThirst < 0) {
             petThirst = 0;
         }
     }
 
     public void play() {
-        petBoredom -= 15;
+        petBoredom -= 10;
         if (petBoredom < 0) {
             petBoredom = 0;
         }
+    }
+
+    public void tick() {
+        petHunger += 5;
+        petThirst += 5;
+        petBoredom += 5;
     }
 }

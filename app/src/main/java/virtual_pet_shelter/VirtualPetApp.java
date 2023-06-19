@@ -20,9 +20,10 @@ public class VirtualPetApp {
                 "---------------------------------------------------------------------------------------------------------------------------");
         for (VirtualPet pet : currentPetShelterList.getShelterPetList()) {
             System.out.println(pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
-            + pet.getPetThirst() + "\t" + pet.getPetBoredom());
+                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
             System.out.println(
                     "---------------------------------------------------------------------------------------------------------------------------");
+                    pet.tick();
         }
         do {
             System.out.println("Please enter a number to make a selection:");
@@ -39,24 +40,26 @@ public class VirtualPetApp {
                 System.out.println("");
                 System.out.println("Name\t\t\tDescription\t\t\t\t\t\t\t\tHunger\tThirst\tBoredom");
                 System.out.println(
-                "---------------------------------------------------------------------------------------------------------------------------");
+                        "---------------------------------------------------------------------------------------------------------------------------");
                 for (VirtualPet pet : currentPetShelterList.getShelterPetList()) {
-                    System.out.println(pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
-                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
                     System.out.println(
-                    "---------------------------------------------------------------------------------------------------------------------------");
+                            pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
+                                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
+                    System.out.println(
+                            "---------------------------------------------------------------------------------------------------------------------------");
                 }
             } else if (userInput == 2) {
                 currentPetShelterList.waterForAllAdoptees();
                 System.out.println("");
                 System.out.println("Name\t\t\tDescription\t\t\t\t\t\t\t\tHunger\tThirst\tBoredom");
                 System.out.println(
-                "---------------------------------------------------------------------------------------------------------------------------");
+                        "---------------------------------------------------------------------------------------------------------------------------");
                 for (VirtualPet pet : currentPetShelterList.getShelterPetList()) {
-                    System.out.println(pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
-                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
                     System.out.println(
-                    "---------------------------------------------------------------------------------------------------------------------------");
+                            pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
+                                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
+                    System.out.println(
+                            "---------------------------------------------------------------------------------------------------------------------------");
                 }
             } else if (userInput == 3) {
                 System.out.println("Please enter the name of the pet you wish to play with.");
@@ -65,28 +68,30 @@ public class VirtualPetApp {
                 System.out.println("");
                 System.out.println("Name\t\t\tDescription\t\t\t\t\t\t\t\tHunger\tThirst\tBoredom");
                 System.out.println(
-                "---------------------------------------------------------------------------------------------------------------------------");
+                        "---------------------------------------------------------------------------------------------------------------------------");
                 for (VirtualPet pet : currentPetShelterList.getShelterPetList()) {
-                    System.out.println(pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
-                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
                     System.out.println(
-                    "---------------------------------------------------------------------------------------------------------------------------");
+                            pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
+                                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
+                    System.out.println(
+                            "---------------------------------------------------------------------------------------------------------------------------");
                 }
-            } else if (userInput == 4){
+            } else if (userInput == 4) {
                 System.out.println("Please enter the name of the pet you would like to adopt.");
                 String adoptedPetName = input.nextLine();
                 currentPetShelterList.removeAdoptedPet(adoptedPetName);
                 System.out.println("");
                 System.out.println("Name\t\t\tDescription\t\t\t\t\t\t\t\tHunger\tThirst\tBoredom");
                 System.out.println(
-                "---------------------------------------------------------------------------------------------------------------------------");
+                        "---------------------------------------------------------------------------------------------------------------------------");
                 for (VirtualPet pet : currentPetShelterList.getShelterPetList()) {
-                    System.out.println(pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
-                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
                     System.out.println(
-                    "---------------------------------------------------------------------------------------------------------------------------");
+                            pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
+                                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
+                    System.out.println(
+                            "---------------------------------------------------------------------------------------------------------------------------");
                 }
-            }else if (userInput == 5){
+            } else if (userInput == 5) {
                 System.out.println("Please enter the name of the animal");
                 String surrenderedPetName = input.nextLine();
                 System.out.println("Please enter a brief description");
@@ -94,17 +99,19 @@ public class VirtualPetApp {
                 String surrenderedPetDescription = input.nextLine();
                 VirtualPet addedAnimal = new VirtualPet(surrenderedPetName, surrenderedPetDescription, 0, 0, 0);
                 currentPetShelterList.addNewPetForAdoption(addedAnimal);
+                System.out.println(surrenderedPetName + " has been accepted and will be cared for here.");
                 System.out.println("");
                 System.out.println("Name\t\t\tDescription\t\t\t\t\t\t\t\tHunger\tThirst\tBoredom");
                 System.out.println(
-                "---------------------------------------------------------------------------------------------------------------------------");
+                        "---------------------------------------------------------------------------------------------------------------------------");
                 for (VirtualPet pet : currentPetShelterList.getShelterPetList()) {
-                    System.out.println(pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
-                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
                     System.out.println(
-                    "---------------------------------------------------------------------------------------------------------------------------");
+                            pet.getPetName() + "\t\t" + pet.getPetDescription() + "\t\t" + pet.getPetHunger() + "\t"
+                                    + pet.getPetThirst() + "\t" + pet.getPetBoredom());
+                    System.out.println(
+                            "---------------------------------------------------------------------------------------------------------------------------");
                 }
-            }else if (userInput == 6){
+            } else if (userInput == 6) {
                 System.out.println("Thank you for your interest.");
                 System.out.println("Please come back if you're ever interested in adopting a furry friend!");
                 quit = true;
