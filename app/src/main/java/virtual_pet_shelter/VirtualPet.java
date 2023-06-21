@@ -47,21 +47,21 @@ public class VirtualPet {
     }
 
     public void feed() {
-        petHunger -= 10;
+        petHunger -= 15;
         if (petHunger < 0) {
             petHunger = 0;
         }
     }
 
     public void drink() {
-        petThirst -= 10;
+        petThirst -= 15;
         if (petThirst < 0) {
             petThirst = 0;
         }
     }
 
     public void play() {
-        petBoredom -= 10;
+        petBoredom -= 15;
         if (petBoredom < 0) {
             petBoredom = 0;
         }

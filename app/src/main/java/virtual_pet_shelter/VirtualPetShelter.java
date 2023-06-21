@@ -98,4 +98,8 @@ public class VirtualPetShelter {
         shelterPetList.add(newAdopteesName);
     }
 
+    public void addNewPetDescriptionForAdoption(VirtualPet newAdopteesName) {
+        descriptivePetList.add(newAdopteesName);
+    }
+
 }
