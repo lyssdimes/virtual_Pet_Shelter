@@ -8,8 +8,6 @@ public class VirtualPetApp {
         public static void main(String[] args) {
                 Scanner input = new Scanner(System.in);
                 boolean quit = false;
-                // VirtualPetShelter petShelterAnimalDescriptionList = new
-                // VirtualPetShelter(null, null);
                 VirtualPet firstAdopteeDescription = new VirtualPet("Shortcake",
                                 "White long haired cat that enjoys being brushed");
                 currentPetShelterList.addNewPet(firstAdopteeDescription);
@@ -25,24 +23,7 @@ public class VirtualPetApp {
                 VirtualPet fifthAdopteeDescription = new VirtualPet("Zoolander",
                                 "Russian blue cat that enjoys short walks outside");
                 currentPetShelterList.addNewPet(fifthAdopteeDescription);
-                System.out.println("");
-                System.out.println(
-                                "---------------------------------------------------------------------------------------------------------------------------");
-                System.out.println("");
-                System.out.println("Welcome to Shaggy & Scooby's Rescue!");
-                System.out.println("It's no mystery that these pets need a home.");
-                System.out.println("Please take a look at our available fuzzy friends.");
-                System.out.println("");
-                System.out.println("Name\t\t\t\t\tHunger\tThirst\tBoredom");
-                System.out.println(
-                                "---------------------------------------------------------------------------------------------------------------------------");
-                for (VirtualPet pet : currentPetShelterList.getShelterPetList()) {
-                        System.out.println(pet.getPetName() + "\t\t\t\t"
-                                        + pet.getPetHunger() + "\t"
-                                        + pet.getPetThirst() + "\t" + pet.getPetBoredom());
-                        System.out.println(
-                                        "---------------------------------------------------------------------------------------------------------------------------");
-                }
+                screenDisplay();
                 do {
                         System.out.println("Please enter a number to make a selection:");
                         System.out.println("1 -- Feed all pets");
@@ -63,29 +44,13 @@ public class VirtualPetApp {
                                 currentPetShelterList.waterForAllAdoptees();
                                 screenDisplay();
                         } else if (userInput == 3) {
-                                System.out.println("Here is our current pet list with descriptions:");
-                                System.out.println("Name\t\t\tDescription");
-                                for (VirtualPet animal : currentPetShelterList.getShelterPetList()) {
-                                        System.out.println("");
-                                        System.out.println(animal.getPetName() + "\t\t" + animal.getPetDescription()
-                                                        + "\t\t");
-                                        System.out.println(
-                                                        "---------------------------------------------------------------------------------------------------------------------------");
-                                }
+                                petDescriptionScreenDisplay();
                                 System.out.println("Please enter the name of the pet you wish to play with");
                                 String userPetPlay = input.nextLine();
                                 currentPetShelterList.playWithSelectedAnimal(userPetPlay);
                                 screenDisplay();
                         } else if (userInput == 4) {
-                                System.out.println("Here is our current pet list with descriptions:");
-                                System.out.println("Name\t\t\tDescription");
-                                for (VirtualPet animal : currentPetShelterList.getShelterPetList()) {
-                                        System.out.println("");
-                                        System.out.println(animal.getPetName() + "\t\t" + animal.getPetDescription()
-                                                        + "\t\t");
-                                        System.out.println(
-                                                        "---------------------------------------------------------------------------------------------------------------------------");
-                                }
+                                petDescriptionScreenDisplay();
                                 System.out.println("Please enter the name of the pet you would like to adopt.");
                                 String adoptedPetName = input.nextLine();
                                 currentPetShelterList.removeAdoptedPet(adoptedPetName);
@@ -118,12 +83,29 @@ public class VirtualPetApp {
                 System.out.println(
                                 "---------------------------------------------------------------------------------------------------------------------------");
                 for (VirtualPet pet : currentPetShelterList.getShelterPetList()) {
+                        String petName = evenSpacing(pet.getPetName());
                         System.out.println(
-                                        pet.getPetName() + "\t\t\t\t"
+                                        petName + "\t\t\t\t"
                                                         + pet.getPetHunger() + "\t" + pet.getPetThirst()
                                                         + "\t" + pet.getPetBoredom());
                         System.out.println(
                                         "---------------------------------------------------------------------------------------------------------------------------");
                 }
+        }
+
+        public static void petDescriptionScreenDisplay() {
+                System.out.println("Here is our current pet list with descriptions:");
+                System.out.println("Name\t\t\tDescription");
+                for (VirtualPet animal : currentPetShelterList.getShelterPetList()) {
+                        System.out.println("");
+                        System.out.println(animal.getPetName() + "\t\t" + animal.getPetDescription()
+                                        + "\t\t");
+                        System.out.println(
+                                        "---------------------------------------------------------------------------------------------------------------------------");
+                }
+        }
+
+        public static String evenSpacing(String inputStr){
+                return (inputStr + " ".repeat(10 - inputStr.length()));
         }
 }

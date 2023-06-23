@@ -16,17 +16,6 @@ public class VirtualPetShelter {
 
     public VirtualPetShelter() {
         shelterPetList = new ArrayList<>();
-
-    //     VirtualPet firstAdoptee = new VirtualPet("Shortcake", 0, 0, 0);
-    //     shelterPetList.add(firstAdoptee);
-    //     VirtualPet secondAdoptee = new VirtualPet("Peppermint", 0, 0, 0);
-    //     shelterPetList.add(secondAdoptee);
-    //     VirtualPet thirdAdoptee = new VirtualPet("Charlotte", 0, 0, 0);
-    //     shelterPetList.add(thirdAdoptee);
-    //     VirtualPet fourthAdoptee = new VirtualPet("Clementine", 0, 0, 0);
-    //     shelterPetList.add(fourthAdoptee);
-    //     VirtualPet fifthAdoptee = new VirtualPet("Zoolander", 0, 0, 0);
-    //     shelterPetList.add(fifthAdoptee);
     }
 
     public VirtualPetShelter(String name, String description) {
