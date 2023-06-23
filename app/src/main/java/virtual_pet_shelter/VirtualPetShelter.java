@@ -17,36 +17,21 @@ public class VirtualPetShelter {
     public VirtualPetShelter() {
         shelterPetList = new ArrayList<>();
 
-        VirtualPet firstAdoptee = new VirtualPet("Shortcake", 0, 0, 0);
-        shelterPetList.add(firstAdoptee);
-        VirtualPet secondAdoptee = new VirtualPet("Peppermint", 0, 0, 0);
-        shelterPetList.add(secondAdoptee);
-        VirtualPet thirdAdoptee = new VirtualPet("Charlotte", 0, 0, 0);
-        shelterPetList.add(thirdAdoptee);
-        VirtualPet fourthAdoptee = new VirtualPet("Clementine", 0, 0, 0);
-        shelterPetList.add(fourthAdoptee);
-        VirtualPet fifthAdoptee = new VirtualPet("Zoolander", 0, 0, 0);
-        shelterPetList.add(fifthAdoptee);
+    //     VirtualPet firstAdoptee = new VirtualPet("Shortcake", 0, 0, 0);
+    //     shelterPetList.add(firstAdoptee);
+    //     VirtualPet secondAdoptee = new VirtualPet("Peppermint", 0, 0, 0);
+    //     shelterPetList.add(secondAdoptee);
+    //     VirtualPet thirdAdoptee = new VirtualPet("Charlotte", 0, 0, 0);
+    //     shelterPetList.add(thirdAdoptee);
+    //     VirtualPet fourthAdoptee = new VirtualPet("Clementine", 0, 0, 0);
+    //     shelterPetList.add(fourthAdoptee);
+    //     VirtualPet fifthAdoptee = new VirtualPet("Zoolander", 0, 0, 0);
+    //     shelterPetList.add(fifthAdoptee);
     }
 
     public VirtualPetShelter(String name, String description) {
         descriptivePetList = new ArrayList<>();
 
-        VirtualPet firstAdopteeDescription = new VirtualPet("Shortcake",
-                "White long haired cat that enjoys being brushed");
-        descriptivePetList.add(firstAdopteeDescription);
-        VirtualPet secondAdopteeDescription = new VirtualPet("Peppermint",
-                "Black short haired cat that loves playing with string toys");
-        descriptivePetList.add(secondAdopteeDescription);
-        VirtualPet thirdAdopteeDescription = new VirtualPet("Charlotte",
-                "Chocolate lab that enjoys daily walks in the park");
-        descriptivePetList.add(thirdAdopteeDescription);
-        VirtualPet fourthAdopteeDescription = new VirtualPet("Clementine",
-                "Gray pitbull that enjoys jogs and belly rubs");
-        descriptivePetList.add(fourthAdopteeDescription);
-        VirtualPet fifthAdopteeDescription = new VirtualPet("Zoolander",
-                "Russian blue cat that enjoys short walks outside");
-        descriptivePetList.add(fifthAdopteeDescription);
     }
 
     public void feedAllAdoptees() {
@@ -94,7 +79,7 @@ public class VirtualPetShelter {
         }
     }
 
-    public void addNewPetForAdoption(VirtualPet newAdopteesName) {
+    public void addNewPet(VirtualPet newAdopteesName) {
         shelterPetList.add(newAdopteesName);
     }
 

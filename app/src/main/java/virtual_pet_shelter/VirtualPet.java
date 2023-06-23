@@ -44,6 +44,9 @@ public class VirtualPet {
     public VirtualPet(String petName, String petDescription) {
         this.petName = petName;
         this.petDescription = petDescription;
+        this.petHunger = createRandomValue();
+        this.petThirst = createRandomValue();
+        this.petBoredom = createRandomValue();
     }
 
     public void feed() {
